@@ -1,0 +1,43 @@
+<!-- Készítsen regisztrációs űrlapot!
+a.) Kérje be felhasználónevet, jelszót, emailt, születési dátumot. A megadott adatokon az 
+alábbi ellenőrzéseket hajtsa végre:
+• a felhasználónév 5 és 16 karakter közöttinek kell lennie
+• a jelszót kétszer kérd be egyformának kell lenniük
+• a jelszó minimum 5 karakter
+• Továbbá (plusz pontért) 
+o A jelszónak tartalmaznia kell kisbetűt, nagybetűt, számot és speciális
+karaktereket (reguláris kifejezés)
+o az email valóban legyen email
+b.) Helyesen megadott adatokkal készítsen egy objektumot és azt a konzolra írja ki
+c.) Hibás adatok esetén hibaüzeneteket jelenítsen meg felugró ablakban -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+</head>
+<body>
+    <form name="regisztracio" method="POST">
+        <label for="nev">Felhasználónév: </label>
+        <input id="nev" type="text" placeholder="Felhasználónév" name="nev" minlength="5" maxlength="16">
+        <br>
+        <label for="jelszo1">Jelszó: </label>
+        <input id="jelszo1" type="text" placeholder="Jelszó" name="jelszo1" minlength="5">
+        <br>
+        <label for="jelszo2">Jelszó még egyszer: </label>
+        <input id="jelszo2" type="text" placeholder="Jelszó még egyszer" name="jelszo2" minlength="5">
+        <br>
+        <label for="email">E-mail cím: </label>
+        <input id="email" type="email" placeholder="E-mail cím" name="email">
+        <br>
+        <label for="szul_datum">Születési dátum: </label>
+        <input id="szul_datum" type="date" name="szul_datum">
+        <br>
+        <button id="gomb" type="button">Regisztráció</button>
+    </form>
+    <script src="feladat3.js"></script>
+</body>
+</html>
