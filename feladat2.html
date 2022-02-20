@@ -1,0 +1,75 @@
+<!-- Készítsen pizzarendelési űrlapot!
+a.) Az űrlap az alábbi adatokat tartalmazza:
+• megrendelő adatai:
+o Teljes név
+o telefonszám
+o irszám, város, utca és házszám
+• pizza adatai:
+o pizza alapja – egy lehetőség választására legyen opció legördülő menüvel
+ tejfölös alap, paradicsomos alap, … (legalább kettőt adjon meg)
+o feltét – több lehetőség választására legyen opció
+ sonka, kukorica, bacon, tojás, … (adjon meg minimum ötöt)
+• Egyéb:
+o megjegyzés
+b.) Helyezzen el egy gombot az űrlap alá „felvétel” felirattal. A kattintásra a megadott 
+adatokkal készítsen egy objektumot és azt a konzolra írja ki. A gombra a kattintási 
+esemény JavaScript kódból helyezze el. -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzarendelés</title>
+</head>
+<body>
+    <form name="rendeles" method="POST">
+        <p>Megrendelő adatai</p>
+        <label for="nev">Teljes név:</label>
+        <input id="nev" type="text" placeholder="Név" name="nev">
+        <br>
+        <label for="telefonszam">Telefonszám: </label>
+        <input id="telszam" type="text" placeholder="Telefonszám" name="telszam">
+        <br>
+        <label for="irszam">Irányítószám: </label>
+        <input id="irszam" type="text" placeholder="Irányítószám" name="irszam">
+        <br>
+        <label for="varos">Város: </label>
+        <input id="varos" type="text" placeholder="Város" name="varos">
+        <br>
+        <label for="utca">Utca: </label>
+        <input id="utca" type="text" placeholder="Utca" name="utca">
+        <br>
+        <label for="hazszam">Házszám: </label>
+        <input id="hazszam" type="text" placeholder="Házszám" name="hazszam">
+        <p>Pizza adatai</p>
+        <label for="pizzaalap">Pizza alap</label>
+        <br>
+        <select name="pizzaalap" id="pizzaalap">
+            <option value="paradicsom">Paradicsomos</option>
+            <option value="tejfol">Tejfölös</option>
+        </select>
+        <br><br>
+        Feltét<br>
+        <input type="checkbox" name="feltet[]" id="sonka" value="sonka">
+        <label for="sonka">Sonka</label>
+        <input type="checkbox" name="feltet[]" id="kukorica" value="kukorica">
+        <label for="kukorica">Kukorica</label>
+        <input type="checkbox" name="feltet[]" id="szalami" value="szalami">
+        <label for="szalami">Szalámi</label>
+        <input type="checkbox" name="feltet[]" id="mozzarella" value="mozzarella">
+        <label for="mozzarella">Mozzarella sajt</label>
+        <input type="checkbox" name="feltet[]" id="ananasz" value="ananasz">
+        <label for="ananasz">Ananász</label>
+        <br>
+        <p>Egyéb</p>
+        <label for="megjegyzes">Megjegyzés: </label>
+        <input type="text" id="megjegyzes"><br><br>
+        <button id="felvetel" type="button">Felvétel</button>
+
+
+    </form>
+    <script src="feladat2.js"></script>
+</body>
+</html>
