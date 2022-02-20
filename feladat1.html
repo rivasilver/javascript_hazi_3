@@ -1,0 +1,35 @@
+<!-- Készíts egy alkalmazást, amely szöveget kisbetűssé vagy nagybetűssé tud alakítani. 
+a.) A szöveget egy beviteli mezőben kelljen beírni
+b.) A felhasználó rádiógombbal választhassa ki, hogy kis- vagy nagybetűssé szeretné 
+alakítani a szöveget.
+c.) Az átalakítás gombra kattintva történjen. A gombra a kattintási esemény JavaScript
+kódból helyezze el.
+• Az átalakításhoz szükséges String függvényeket keresse meg a referenciából: 
+https://www.w3schools.com/jsref/jsref_obj_string.asp
+d.) Ha a felhasználó nem írt be szöveget vagy nem választott ki rádiógombot, akkor 
+felugróablakban hibaüzenet jelenjen meg. -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisbetű-nagybetű</title>
+</head>
+<body>
+
+    <label for="szoveg">Szöveg: </label>
+    <input id="szoveg" type="text" placeholder="Ide írd a szöveget!" name="szoveg"><br>
+    <input type="radio" name="milyen" id="kisbetus" value="kisbetus">
+    <label for="kisbetus">Kisbetűssé</label>
+    <br>
+    <input type="radio" name="milyen" id="nagybetus" value="nagybetus">
+    <label for="nagybetus">Nagybetűssé</label>
+    <br>
+    <button onclick="atalakit()">Átalakítom!</button>
+    <p id="eredmeny"></p>
+
+    <script src="feladat1.js"></script>
+</body>
+</html>
