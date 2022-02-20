@@ -1,0 +1,56 @@
+<!-- Készítsen egy űrlapot tetszőleges témában
+a.) Az űrlapon legalább 6 különböző adatot kérjen be és legalább 4 különböző beviteli mező 
+típust használjon.
+b.) Ellenőrizze, hogy a felhasználó kitöltött minden mezőt, ha nem akkor megfelelő 
+hibaüzenettel tájékoztassa a felhasználót
+c.) Helyesen megadott adatokkal készítsen egy objektumot és azt a konzolra írja ki
+d.) Plusz pontért
+• formázza az űrlapot bootstrap segítségével
+• Az űrlap tartalmazzon egy Likert-skálát is. -->
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Űrlap</title>
+</head>
+<body>
+    <form name="olvas" method="POST">
+        <label for="nev">Név: </label>
+        <input id="nev" type="text" placeholder="A te neved" name="nev">
+        <br><br>
+        <label for="kedvenc_konyv">Mi a kedvenc könyved? </label>
+        <input id="kedvenc_konyv" type="text" placeholder="Ide írd a címét" name="kedvenc_konyv">
+        <br><br>
+        <label for="kedvenc_iro">Ki a kedvenc íród? </label>
+        <input id="kedvenc_iro" type="text" placeholder="Ide írd a nevét" name="kedvenc_iro">
+        <br><br>
+        <label for="db">Hány könyvet olvastál el tavaly?</label>
+        <br>
+        <select name="db" id="db">
+            <option value="1">Nem olvastam tavaly</option>
+            <option value="2">1-10</option>
+            <option value="3">11-50</option>
+            <option value="4">51-100</option>
+            <option value="5">Több, mint 100</option>
+        </select><br><br>
+        Milyen műfajt szeretsz olvasni?<br>
+        <input type="checkbox" name="mufaj[]" id="scifi" value="scifi">
+        <label for="scifi">Sci-fi</label>
+        <input type="checkbox" name="mufaj[]" id="fantasy" value="fantasy">
+        <label for="fantasy">Fantasy</label>
+        <input type="checkbox" name="mufaj[]" id="krimi" value="krimi">
+        <label for="krimi">Krimi</label>
+        <input type="checkbox" name="mufaj[]" id="horror" value="horror">
+        <label for="horror">Horror</label>
+        <input type="checkbox" name="mufaj[]" id="romantikus" value="romantikus">
+        <label for="romantikus">Romantikus</label><br><br>
+        <label for="mikor">Mikor olvastál utoljára?</label>
+        <input id="mikor" type="date" name="mikor"><br><br>
+        <button id="elkuld" type="button">Elküld</button>
+    </form>
+    <script src="feladat4.js"></script>
+</body>
+</html>
